@@ -11,3 +11,4 @@ conda install -c conda-forge holoviews -y
 pip install pystan
 pip install prophet
 pip install tensorflow
+python -m ipykernel install --user --name etf_forecasting_env

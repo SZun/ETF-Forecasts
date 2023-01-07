@@ -8,6 +8,7 @@ conda install -c anaconda numpy -y
 conda install -c conda-forge matplotlib -y
 conda install -c conda-forge hvplot -y
 conda install -c conda-forge holoviews -y
+conda install -c anaconda seaborn
 pip install pystan
 pip install prophet
 pip install tensorflow

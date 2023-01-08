@@ -17,7 +17,7 @@ class Plotter:
     def get_image_path(self, title): 
         return Path(f'./Resources/images/plots/{title.lower().replace(" ","_")}.png')
         
-    def line(self, df, title):
+    def line(self, df, title, bgcolor='#F5F5F5'):
         title = title + ' ETF Adjusted Closing Prices'
         
         line_plot = df.hvplot(
@@ -40,7 +40,8 @@ class Plotter:
                                     'yticks': 10, 
                                     'legend': 11, 
                                     'legend_title': 14
-                                }
+                                },
+                                bgcolor=bgcolor
                             )
         
         hvplot.save(line_plot,self.get_image_path(title))

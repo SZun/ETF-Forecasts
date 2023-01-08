@@ -25,8 +25,8 @@ class Plotter:
                             ylabel='Adjusted Close Price - USD',
                             rot=45,
                             grid=True, 
-                            height=550, 
-                            width=1200,
+                            height=750, 
+                            width=1500,
                             line_width=3,
                             hover_line_width=5,
                             group_label='Adjusted Closing Price',
@@ -34,7 +34,7 @@ class Plotter:
                             hover_alpha=1,
                             ).opts(
                                 fontsize={
-                                    'title': 21, 
+                                    'title': 24, 
                                     'labels': 15,
                                     'xticks': 10, 
                                     'yticks': 10, 
@@ -70,23 +70,20 @@ class Plotter:
                                          ylabel='ETF Price');
         fig.savefig(self.get_image_path(title))
         
-    def bar(self, df, isMSE=True):
-        mse_type = f"{'' if isMSE else 'Root '}Mean Squared Error"
-        title = 'Model Prediction ' +  mse_type
-
+    def bar(self, df, title):
         bar_plot = df.hvplot.bar(
                             title=title,
-                            ylabel=mse_type,
+                            ylabel=title,
                             xlabel='ETF',
                             rot=45,
                             grid=True, 
-                            height=550, 
-                            width=1200,
+                            height=750, 
+                            width=1500,
                             alpha=.7,
                             hover_alpha=1,
                             ).opts(
                                 fontsize={
-                                    'title': 21, 
+                                    'title': 24, 
                                     'labels': 15,
                                     'xticks': 10, 
                                     'yticks': 10, 

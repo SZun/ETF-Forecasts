@@ -95,7 +95,8 @@ class Plotter:
                             hover_alpha=self.hover_alpha,
                             ).opts(
                                 fontsize=self.fontsize,
-                                bgcolor=self.bgcolor
+                                bgcolor=self.bgcolor,
+                                yformatter='%0f'
                             )
         # Saving image of plot
         hvplot.save(bar_plot,self.get_image_path(title))

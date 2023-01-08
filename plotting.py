@@ -12,44 +12,66 @@ class Plotter:
     """
     
     def __init__(self):
-        pass
+        self.rot = 45
+        self.grid = True
+        self.height = 750
+        self.width = 1500
+        self.alpha = .7
+        self.hover_alpha = 1
+        self.fontsize = {'title': 24,'labels': 15,'xticks': 10,'yticks': 10,'legend': 11,'legend_title': 14}
+        self.bgcolor = '#F5F5F5'
         
     def get_image_path(self, title): 
         return Path(f'./Resources/images/plots/{title.lower().replace(" ","_")}.png')
         
     def line(self, df, title, bgcolor='#F5F5F5'):
+        acp = 'Adjusted Close Price'
         title = title + ' ETF Adjusted Closing Prices'
         
         line_plot = df.hvplot(
                             title=title,
-                            ylabel='Adjusted Close Price - USD',
-                            rot=45,
-                            grid=True, 
-                            height=750, 
-                            width=1500,
+                            ylabel=f'{acp} - USD',
+                            rot=self.rot,
+                            grid=self.grid, 
+                            height=self.height, 
+                            width=self.width,
                             line_width=3,
                             hover_line_width=5,
-                            group_label='Adjusted Closing Price',
-                            alpha=.7,
-                            hover_alpha=1,
+                            group_label=acp,
+                            alpha=self.alpha,
+                            hover_alpha=self.hover_alpha,
                             ).opts(
-                                fontsize={
-                                    'title': 24, 
-                                    'labels': 15,
-                                    'xticks': 10, 
-                                    'yticks': 10, 
-                                    'legend': 11, 
-                                    'legend_title': 14
-                                },
+                                fontsize=self.fontsize,
                                 bgcolor=bgcolor
                             )
         
         hvplot.save(line_plot,self.get_image_path(title))
         
         return line_plot
+        
+    def bar(self, df, title):
+        bar_plot = df.hvplot.bar(
+                            title=title,
+                            ylabel=title,
+                            xlabel='ETF',
+                            rot=self.rot,
+                            grid=self.grid, 
+                            height=self.height, 
+                            width=self.width,
+                            alpha=self.alpha,
+                            hover_alpha=self.hover_alpha,
+                            ).opts(
+                                fontsize=self.fontsize,
+                                bgcolor=self.bgcolor
+                            )
+
+        hvplot.save(bar_plot,self.get_image_path(title))
+
+        return bar_plot
     
     def heatmap(self, df, title):
-        title = title + ' ETF Price Correlation'
+        etf_price = 'ETF Price'
+        title = title + f' {etf_price} Correlation'
         
         # Create correlation matrix DataFrame
         correlation_df = df.corr()
@@ -67,32 +89,6 @@ class Plotter:
                         center=0,
                         cmap='vlag', 
                         linewidth=1,
-                        square=True).set(xlabel='ETF Price',
-                                         ylabel='ETF Price');
+                        square=True).set(xlabel=etf_price,
+                                         ylabel=etf_price);
         fig.savefig(self.get_image_path(title))
-        
-    def bar(self, df, title):
-        bar_plot = df.hvplot.bar(
-                            title=title,
-                            ylabel=title,
-                            xlabel='ETF',
-                            rot=45,
-                            grid=True, 
-                            height=750, 
-                            width=1500,
-                            alpha=.7,
-                            hover_alpha=1,
-                            ).opts(
-                                fontsize={
-                                    'title': 24, 
-                                    'labels': 15,
-                                    'xticks': 10, 
-                                    'yticks': 10, 
-                                },
-                                yformatter='%0f',
-                                bgcolor="#F0F0F0"
-                            )
-
-        hvplot.save(bar_plot,self.get_image_path(title))
-
-        return bar_plot

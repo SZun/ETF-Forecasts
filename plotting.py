@@ -29,7 +29,7 @@ class Plotter:
                             width=1200,
                             line_width=3,
                             hover_line_width=5,
-                            group_label='Adjusted Close Price',
+                            group_label='Adjusted Closing Price',
                             alpha=.7,
                             hover_alpha=1,
                             ).opts(

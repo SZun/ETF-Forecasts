@@ -20,13 +20,14 @@ class Plotter:
         
     """
     
-    def __init__(self):
+    def __init__(self, notebook):
         
         """
             Initializes Variables
         """
         
         # Initializing class variables
+        self.notebook = notebook
         self.rot = 45
         self.grid = True
         self.height = 750
@@ -42,7 +43,7 @@ class Plotter:
             Returns path for image by title
         """
         # Returning path for image
-        return Path(f'./Resources/images/plots/{title.lower().replace(" ","_")}.png')
+        return Path(f'./Resources/images/plots/{self.notebook}_{title.lower().replace(" ","_")}.png')
         
     def line(self, df, title, bgcolor='#F5F5F5'):
         

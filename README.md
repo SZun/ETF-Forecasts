@@ -33,8 +33,8 @@ $ anaconda --version
 Output: anaconda Command line client (version 1.11.0)
 $ conda --verison
 Output: conda 22.9.0
-$ pip -- verison
-Ouput: pip 22.2.2 from /Users/{#User}/opt/anaconda3/lib/python3.9/site-packages/pip (python 3.9)
+$ pip --verison
+Ouput: pip 22.2.2 from /Users/{#Username}/opt/anaconda3/lib/python3.9/site-packages/pip (python 3.9)
 ```
 
 ### Cloning Repo, Installing Dependencies & Running Jupyter

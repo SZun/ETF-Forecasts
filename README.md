@@ -18,6 +18,8 @@ The data that used was pulled from Yahoo Finance. The focus of the data was on t
 ### Facebook Prophet vs Tensorflow LSTM RNN Forecasting Results
 @TODO
 
+## Conclusion
+
 ## Getting Started
 
 ### Prerequisites

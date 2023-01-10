@@ -7,7 +7,7 @@ In this project we are using historic ETF data from Yahoo Finance to predict/for
 ## Notebooks
 - [Data Analysis](./Data-Exploration.ipynb)
 - [Prophet Model Forecasting](./Prophet.ipynb)
-- [LSTM RNN Forecasting](./LSTM_RNN.ipynb)
+- [LSTM RNN Model Forecasting](./LSTM_RNN.ipynb)
 - [Model Analysis](./Prophet_vs_RNN_Analysis.ipynb)
 
 ## Analysis

@@ -13,7 +13,7 @@ In this project we are using historic ETF data from Yahoo Finance to predict/for
 ## Analysis
 
 ### Data
-The data that used was pulled from Yahoo Finance. The focus of the data was on three ETFs: ARKK, SPY, and FNGU. The timeframe of the data is from January of 2018 to March of 2022. To get a clear review and analysis of the data we used the "Adjusted Close" price.
+The data used was pulled from Yahoo Finance. The focus of the data was on three ETFs: ARKK, SPY, and FNGU. The timeframe of the data is from January of 2018 to March of 2022. To get a clear review and analysis of the data we used the "Adjusted Close" price.
 
 ### Facebook Prophet vs Tensorflow LSTM RNN Forecasting Results
 @TODO

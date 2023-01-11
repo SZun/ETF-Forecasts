@@ -74,7 +74,7 @@ class Plotter:
                             )
         
         # Saving image of plot
-        hvplot.save(line_plot,self.get_image_path(title))
+        # hvplot.save(line_plot,self.get_image_path(title))
         # Returning plot
         return line_plot
         
@@ -100,7 +100,7 @@ class Plotter:
                                 yformatter='%0f'
                             )
         # Saving image of plot
-        hvplot.save(bar_plot,self.get_image_path(title))
+        # hvplot.save(bar_plot,self.get_image_path(title))
         # Returning plot
         return bar_plot
     
@@ -131,4 +131,4 @@ class Plotter:
                         linewidth=1,
                         square=True).set(xlabel=etf_price,
                                          ylabel=etf_price);
-        fig.savefig(self.get_image_path(title))
+        # fig.savefig(self.get_image_path(title))

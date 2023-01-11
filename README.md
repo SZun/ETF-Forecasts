@@ -31,15 +31,15 @@ Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
 :-------------------------:|:-------------------------:
 **ARKK** - *Mean Absolute Error:* 27.73 | **ARKK** - *Mean Absolute Error:* 69.88
 **SPY** - *Mean Absolute Error:* 35.37 | **SPY** - *Mean Absolute Error:* 436.76
-**FNGU** - *Mean Absolute Error:* | **FNGU** - *Mean Absolute Error:* 246.19
+**FNGU** - *Mean Absolute Error:* 175.58 | **FNGU** - *Mean Absolute Error:* 246.19
 ![Prophet - Mean Absolute Error](./Resources/images/markdown/Prophet/metrics/Prophet_mean_absolute_error.png)  |  ![LSTM - Mean Absolute Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_mean_absolute_error.png)
 **ARKK** - *Mean Squared Error:* 816.93 | **ARKK** - *Mean Squared Error:* 4954.66
 **SPY** - *Mean Squared Error:* 1599.15 | **SPY** - *Mean Squared Error:* 190968.11
 **FNGU** - *Mean Squared Error:* 35186.88 | **FNGU** - *Mean Squared Error:* 64041.90
 ![Prophet - Mean Squared Error](./Resources/images/markdown/Prophet/metrics/Prophet_mean_squared_error.png)  |  ![LSTM - Mean Squared Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_mean_squared_error.png)
-**ARKK** - *Root Mean Squared Error:* 27.73 | **ARKK** - *Root Mean Squared Error:* 70.39
-**SPY** - *Root Mean Squared Error:* | **SPY** - *Root Mean Squared Error:* 437.00
-**FNGU** - *Root Mean Squared Error:* 35.37 | **FNGU** - *Root Mean Squared Error:* 253.07
+**ARKK** - *Root Mean Squared Error:* 28.58 | **ARKK** - *Root Mean Squared Error:* 70.39
+**SPY** - *Root Mean Squared Error:* 39.99 | **SPY** - *Root Mean Squared Error:* 437.00
+**FNGU** - *Root Mean Squared Error:* 187.58 | **FNGU** - *Root Mean Squared Error:* 253.07
 ![Prophet - Root Mean Squared Error](./Resources/images/markdown/Prophet/metrics/Prophet_root_mean_squared_error.png)  |  ![LSTM - Root Mean Squared Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_root_mean_squared_error.png)
 ### Forecasting Results
 Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models

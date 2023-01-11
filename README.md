@@ -13,16 +13,59 @@ In this project we are using historic ETF data from Yahoo Finance to predict/for
 - [Prophet Model Forecasting](./Prophet.ipynb)
 - [LSTM RNN Model Forecasting](./LSTM_RNN.ipynb)
 
-## Analysis
+## Results
 <hr>
 
 ### Data
 The data used was pulled from Yahoo Finance. The focus of the data was on three ETFs: ARKK, SPY, and FNGU. The timeframe of the data is from January of 2018 to March of 2022. To get a clear review and analysis of the data we used the Adjusted Close Price.
 
-### Facebook/Meta Prophet Model vs Tensorflow LSTM RNN Model Forecasting Results
+The Data is stored in a CSV and can be found here: [ETF Data CSV](./Resources/Data/etf_data.csv)
+
+@TODO: Add original visualizations
+
+### Metrics Results
+Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
+:-------------------------:|:-------------------------:
+**All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Mean Absolute Error* | **All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Mean Absolute Error*
+**ARKK** - *Mean Absolute Error:* | **ARKK** - *Mean Absolute Error:* 69.88
+**SPY** - *Mean Absolute Error:* | **SPY** - *Mean Absolute Error:* 436.76
+**FNGU** - *Mean Absolute Error:* | **FNGU** - *Mean Absolute Error:* 246.19
+![Prophet - Mean Absolute Error](./Resources/images/markdown/Prophet_mean_absolute_error.png)  |  ![LSTM - Mean Absolute Error](./Resources/images/markdown/LSTM_RNN_mean_absolute_error.png)
+**All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Mean Squared Error* | **All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Mean Squared Error*
+**ARKK** - *Mean Squared Error:* | **ARKK** - *Mean Squared Error:* 4954.66
+**SPY** - *Mean Squared Error:* | **SPY** - *Mean Squared Error:* 190968.11
+**FNGU** - *Mean Squared Error:* | **FNGU** - *Mean Squared Error:* 64041.90
+![Prophet - Mean Squared Error](./Resources/images/markdown/Prophet_mean_squared_error.png)  |  ![LSTM - Mean Squared Error](./Resources/images/markdown/LSTM_RNN_mean_squared_error.png)
+**All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Root Mean Squared Error* | **All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Root Mean Squared Error*
+**ARKK** - *Root Mean Squared Error:* | **ARKK** - *Root Mean Squared Error:* 70.39
+**SPY** - *Root Mean Squared Error:* | **SPY** - *Root Mean Squared Error:* 437.00
+**FNGU** - *Root Mean Squared Error:* | **FNGU** - *Root Mean Squared Error:* 253.07
+![Prophet - Root Mean Squared Error](./Resources/images/markdown/Prophet_root_mean_squared_error.png)  |  ![LSTM - Root Mean Squared Error](./Resources/images/markdown/LSTM_RNN_root_mean_squared_error.png)
+### Forecasting Results
+Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
+:-------------------------:|:-------------------------:
+**All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Training Data vs Actual vs Forecasted Adjusted Closing Price* | **All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Training Data vs Actual vs Forecasted Adjusted Closing Price*
+![Prophet - ](./)  |  ![LSTM - ](./)
+**All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - Actual vs Forecasted Adjusted Closing Price | **All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Actual vs Forecasted Adjusted Closing Price*
+![Prophet - ](./Resources/images/markdown/Prophet_actual_vs_forecasted_etf_adjusted_closing_prices.png)  |  ![LSTM - ](./Resources/images/markdown/LSTM_RNN_actual_vs_forecasted_etf_adjusted_closing_prices.png)
+**ARK Innovation ETF** - *Ticker:* **ARKK** - *Training Data vs Actual vs Forecasted Adjusted Closing Price* | **ARK Innovation ETF** - *Ticker:* **ARKK** - *Training Data vs Actual vs Forecasted Adjusted Closing Price*
+![Prophet - ](./)  |  ![LSTM - ](./)
+**ARK Innovation ETF** - *Ticker:* **ARKK** - Actual vs Forecasted Adjusted Closing Price | **ARK Innovation ETF** - *Ticker:* **ARKK** - *Actual vs Forecasted Adjusted Closing Price*
+![Prophet - ](./Resources/images/markdown/Prophet_arkk_actual_vs_forecasted_etf_adjusted_closing_prices.png)  |  ![LSTM - ](./Resources/images/markdown/LSTM_RNN_arkk_actual_vs_forecasted_etf_adjusted_closing_prices.png)
+**SPDR S&P 500 ETF Trust** - *Ticker:* **SPY** - *Training Data vs Actual vs Forecasted Adjusted Closing Price* | **SPDR S&P 500 ETF Trust** - *Ticker:* **SPY** - *Training Data vs Actual vs Forecasted Adjusted Closing Price*
+![Prophet - ](./)  |  ![LSTM - ](./)
+**SPDR S&P 500 ETF Trust** - *Ticker:* **SPY** - Actual vs Forecasted Adjusted Closing Price | **SPDR S&P 500 ETF Trust** - *Ticker:* **SPY** - *Actual vs Forecasted Adjusted Closing Price*
+![Prophet - ](./Resources/images/markdown/Prophet_spy_actual_vs_forecasted_etf_adjusted_closing_prices.png)  |  ![LSTM - ](./Resources/images/markdown/LSTM_RNN_spy_actual_vs_forecasted_etf_adjusted_closing_prices.png)
+**Bank of Montreal MicroSectors FANG Index** - *Ticker:* **FNGU** - *Training Data vs Actual vs Forecasted Adjusted Closing Price* | **Bank of Montreal MicroSectors FANG Index** - *Ticker:* **FNGU** - *Training Data vs Actual vs Forecasted Adjusted Closing Price*
+![Prophet - ](./)  |  ![LSTM - ](./)
+**Bank of Montreal MicroSectors FANG Index** - *Ticker:* **FNGU** - Actual vs Forecasted Adjusted Closing Price | **Bank of Montreal MicroSectors FANG Index** - *Ticker:* **FNGU** - *Actual vs Forecasted Adjusted Closing Price*
+![Prophet - ](./Resources/images/markdown/Prophet_fngu_actual_vs_forecasted_etf_adjusted_closing_prices.png)  |  ![LSTM - ](./Resources/images/markdown/LSTM_RNN_fngu_actual_vs_forecasted_etf_adjusted_closing_prices.png)
+
+### Facebook/Meta Prophet Model vs Tensorflow LSTM RNN Model Findings
 @TODO
 
 ## Conclusion/Summary
+<hr>
 @TODO
 
 ## Getting Started

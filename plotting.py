@@ -131,4 +131,4 @@ class Plotter:
                         linewidth=1,
                         square=True).set(xlabel=etf_price,
                                          ylabel=etf_price);
-        fig.savefig(self.get_image_path(title))
+        # fig.savefig(self.get_image_path(title))

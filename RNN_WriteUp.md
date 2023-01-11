@@ -54,10 +54,9 @@ Upon notice that our model was performing poorly  we then started  series of par
 
 -----------------------------
 
-![](Resources/images/markdown/LSTM_RNN_arkk_actual_vs_forecasted_etf_adjusted_closing_prices-Copy1.png)<br>
-![](Resources/images/markdown/LSTM_RNN_fngu_actual_vs_forecasted_etf_adjusted_closing_prices-Copy1.png)<br>
-![](Resources/images/markdown/LSTM_RNN_spy_actual_vs_forecasted_etf_adjusted_closing_prices-Copy1.png)<br>
-
+![](Resources/images/plots/LSTM_RNN_arkk_actual_vs_forecasted_etf_adjusted_closing_prices_old.png)<br>
+![](Resources/images/plots/LSTM_RNN_fngu_actual_vs_forecasted_etf_adjusted_closing_prices_old.png)<br>
+![](Resources/images/plots/LSTM_RNN_spy_actual_vs_forecasted_etf_adjusted_closing_prices_old.png)<br>
 
 
 
@@ -94,9 +93,9 @@ Root Mean Squared Error: 253.47<br>
 
 
 
-![](Resources/images/plots/LSTM_RNN_arkk_actual_vs_forecasted_etf_adjusted_closing_prices.png)<br>
-![](Resources/images/plots/LSTM_RNN_fngu_actual_vs_forecasted_etf_adjusted_closing_prices.png)<br>
-![](Resources/images/plots/LSTM_RNN_spy_actual_vs_forecasted_etf_adjusted_closing_prices.png)<br>
+![](Resources/images/markdown/LSTM_RNN_arkk_actual_vs_forecasted_etf_adjusted_closing_prices-Copy1.png)<br>
+![](Resources/images/markdown/LSTM_RNN_fngu_actual_vs_forecasted_etf_adjusted_closing_prices-Copy1.png)<br>
+![](Resources/images/markdown/LSTM_RNN_spy_actual_vs_forecasted_etf_adjusted_closing_prices-Copy1.png)<br>
 
 
 

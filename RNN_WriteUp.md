@@ -91,6 +91,10 @@ Root Mean Squared Error: 253.47<br>
 ---------------------------------------------------<br>
 ---------------------------------------------------<br>
 
+After discussing and researching different hyperparameter tuning methods we came to the conclusion that we needed to. <br>
+1. Try a larger data set <br>
+2. Increase the number of epochs <br>
+
 
 
 ![](Resources/images/markdown/LSTM_RNN_arkk_actual_vs_forecasted_etf_adjusted_closing_prices-Copy1.png)<br>
@@ -116,3 +120,8 @@ FNGU<br>
 Mean Absolute Error: 246.26<br>
 Mean Squared Error: 64077.45<br>
 Root Mean Squared Error: 253.14<br>
+
+
+## Conclusion
+
+After trying a number of different methods for increasing accuracy within the model. We realized that the dataset is the foundation of the accuracy of the model. Hyperparameter tuning was relatively minumal however largely effected the outcome of the forecast. 

@@ -23,17 +23,17 @@ The Data is stored in a CSV and can be found here: [ETF Data CSV](./Resources/Da
 ### Metrics Results
 Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
 :-------------------------:|:-------------------------:
-**ARKK** - *Mean Absolute Error:* 27.73 | **ARKK** - *Mean Absolute Error:* 69.88
-**SPY** - *Mean Absolute Error:* 35.37 | **SPY** - *Mean Absolute Error:* 436.76
-**FNGU** - *Mean Absolute Error:* 175.58 | **FNGU** - *Mean Absolute Error:* 246.19
+**ARKK** - *Mean Absolute Error:* 9.43 | **ARKK** - *Mean Absolute Error:* 69.90
+**SPY** - *Mean Absolute Error:* 34.92 | **SPY** - *Mean Absolute Error:* 436.71
+**FNGU** - *Mean Absolute Error:* 49.36 | **FNGU** - *Mean Absolute Error:* 246.19
 ![Prophet - Mean Absolute Error](./Resources/images/markdown/Prophet/metrics/Prophet_mean_absolute_error.png)  |  ![LSTM - Mean Absolute Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_mean_absolute_error.png)
-**ARKK** - *Mean Squared Error:* 816.93 | **ARKK** - *Mean Squared Error:* 4954.66
-**SPY** - *Mean Squared Error:* 1599.15 | **SPY** - *Mean Squared Error:* 190968.11
-**FNGU** - *Mean Squared Error:* 35186.88 | **FNGU** - *Mean Squared Error:* 64041.90
+**ARKK** - *Mean Squared Error:* 192.27 | **ARKK** - *Mean Squared Error:* 4956.81
+**SPY** - *Mean Squared Error:* 1522.05 | **SPY** - *Mean Squared Error:* 190925.27
+**FNGU** - *Mean Squared Error:* 3147.08 | **FNGU** - *Mean Squared Error:* 64040.12
 ![Prophet - Mean Squared Error](./Resources/images/markdown/Prophet/metrics/Prophet_mean_squared_error.png)  |  ![LSTM - Mean Squared Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_mean_squared_error.png)
-**ARKK** - *Root Mean Squared Error:* 28.58 | **ARKK** - *Root Mean Squared Error:* 70.39
-**SPY** - *Root Mean Squared Error:* 39.99 | **SPY** - *Root Mean Squared Error:* 437.00
-**FNGU** - *Root Mean Squared Error:* 187.58 | **FNGU** - *Root Mean Squared Error:* 253.07
+**ARKK** - *Root Mean Squared Error:* 13.87 | **ARKK** - *Root Mean Squared Error:* 70.40
+**SPY** - *Root Mean Squared Error:* 39.01 | **SPY** - *Root Mean Squared Error:* 436.95
+**FNGU** - *Root Mean Squared Error:* 56.10 | **FNGU** - *Root Mean Squared Error:* 253.067
 ![Prophet - Root Mean Squared Error](./Resources/images/markdown/Prophet/metrics/Prophet_root_mean_squared_error.png)  |  ![LSTM - Root Mean Squared Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_root_mean_squared_error.png)
 ### Forecasting Results
 Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
@@ -56,10 +56,22 @@ Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
 ![Prophet - FNGU - Actual vs Forecasted Adjusted Closing Price](./Resources/images/markdown/Prophet/plots/Prophet_fngu_actual_vs_forecasted_etf_adjusted_closing_prices.png)  |  ![LSTM - FNGU - Actual vs Forecasted Adjusted Closing Price](./Resources/images/markdown/LSTM_RNN/plots/LSTM_RNN_fngu_actual_vs_forecasted_etf_adjusted_closing_prices.png)
 
 ### Facebook/Meta Prophet Model vs Tensorflow LSTM RNN Model Findings
-@TODO
+Both models were train on the same data, as well as used the same data for forecasting.
+
+The data used for LSTM RNN had to be scaled using the MinMaxScaler from sklearn. But the data for Prophet simply had to have the names of the columns changed to 'ds' and 'y'.
+
+Both of the models had a train-test-split. The Prophet model simply split the DataFrame into train and test data, not features and targets. The LSTM train-test-split was much more involved. Not only was the data split into training and testing features and targets, but had to be reshaped using numpy.
+
+Creating the Prophet model was simpler and less time consuming than that of the LSTM RNN. The Prophet model class was already built and just needed to have certain parameters filled in and tuned. Whereas the LSTM RNN model was built from scratch using a Sequential model, two LSTM layers, a third Dense layer, and a final Dense outplut layer. We also used the adam optimizer, and calculated the mean absolute error and mean squared error for our loss function and metrics.  
+
+Though when tuning the models, the LSTM RNN took much less hyperperamater tuning and resulted in much better forecasting. For the LSTM RNN we increased the amount of training data, as well as upped the epochs to 35 (where we saw the beginning of dimished returns). Though for the Prophet model, we used a technique of automatic hyperparameter tuning. To do this we fed in a dictionary with the names of the parameters as keys and an array of possible values. We then ran the Prophet model with every combination of the values to assertain the best fitting parameters.
+
+Forecasting was simple for both models. Both models supplied a predict method that took the training data.
+
+The evaluation and results for the two models was stark and quite interesting. The Prophet models had much better results for Mean Absolute Error, Mean Squared Error and Root Mean Squared Error for their forecasts. Though when looking at the results as visualizations, we can clearly see that the LSTM RNN models performed much better, and had much better predictive power when it came to forecasting these ETF prices.
 
 ## Conclusion/Summary
-@TODO
+In conclusion, we saw that the Prophet model was easier to develop when it came to processing the data, doing the train-test-split, creating and training the model, as well as scoring high well in terms of the metrics. Though we know that for tuning as well as the final visualized results, we can see that the Prophet model fell very short compared to the LSTM RNN. The LSTM RNN was much more involved and harder to develop. Everything from scaling the data, the tran-test-split and reshaping of the data, to creating and training the models, as well as scoring poorly on the metrics. But when it came to tuning as well as the predictive power of the model, we can see that investing the time was well worth it. All in all, we would reccomend using the LSTM RNN model for its highly performant deep learning predictive power, whereas we would reccomend using the Prophet model when development time and ease of use is paramount.
 
 ## Getting Started
 ### Prerequisites

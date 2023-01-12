@@ -56,10 +56,22 @@ Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
 ![Prophet - FNGU - Actual vs Forecasted Adjusted Closing Price](./Resources/images/markdown/Prophet/plots/Prophet_fngu_actual_vs_forecasted_etf_adjusted_closing_prices.png)  |  ![LSTM - FNGU - Actual vs Forecasted Adjusted Closing Price](./Resources/images/markdown/LSTM_RNN/plots/LSTM_RNN_fngu_actual_vs_forecasted_etf_adjusted_closing_prices.png)
 
 ### Facebook/Meta Prophet Model vs Tensorflow LSTM RNN Model Findings
-@TODO
+Both models were train on the same data, as well as used the same data for forecasting.
+
+The data used for LSTM RNN had to be scaled using the MinMaxScaler from sklearn. But the data for Prophet simply had to have the names of the columns changed to 'ds' and 'y'.
+
+Both of the models had a train-test-split. The Prophet model simply split the DataFrame into train and test data, not features and targets. The LSTM train-test-split was much more involved. Not only was the data split into training and testing features and targets, but had to be reshaped using numpy.
+
+Creating the Prophet model was simpler and less time consuming than that of the LSTM RNN. The Prophet model class was already built and just needed to have certain parameters filled in and tuned. Whereas the LSTM RNN model was built from scratch using a Sequential model, two LSTM layers, a third Dense layer, and a final Dense outplut layer. We also used the adam optimizer, and calculated the mean absolute error and mean squared error for our loss function and metrics.  
+
+Though when tuning the models, the LSTM RNN took much less hyperperamater tuning and resulted in much better forecasting. For the LSTM RNN we increased the amount of training data, as well as upped the epochs to 35 (where we saw the beginning of dimished returns). Though for the Prophet model, we used a technique of automatic hyperparameter tuning. To do this we fed in a dictionary with the names of the parameters as keys and an array of possible values. We then ran the Prophet model with every combination of the values to assertain the best fitting parameters.
+
+Forecasting was simple for both models. Both models supplied a predict method that took the training data.
+
+The evaluation and results for the two models was stark and quite interesting. The Prophet models had much better results for Mean Absolute Error, Mean Squared Error and Root Mean Squared Error for their forecasts. Though when looking at the results as visualizations, we can clearly see that the LSTM RNN models performed much better, and had much better predictive power when it came to forecasting these ETF prices.
 
 ## Conclusion/Summary
-@TODO
+In conclusion, we saw that the Prophet model was easier to develop when it came to processing the data, doing the train-test-split, creating and training the model, as well as scoring high well in terms of the metrics. Though we know that for tuning as well as the final visualized results, we can see that the Prophet model fell very short compared to the LSTM RNN. The LSTM RNN was much more involved and harder to develop. Everything from scaling the data, the tran-test-split and reshaping of the data, to creating and training the models, as well as scoring poorly on the metrics. But when it came to tuning as well as the predictive power of the model, we can see that investing the time was well worth it. All in all, we would reccomend using the LSTM RNN model for its highly performant deep learning predictive power, whereas we would reccomend using the Prophet model when development time and ease of use is paramount.
 
 ## Getting Started
 ### Prerequisites

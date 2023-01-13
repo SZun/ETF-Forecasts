@@ -20,22 +20,6 @@ The Data is stored in a CSV and can be found here: [ETF Data CSV](./Resources/Da
 ![SPY](./Resources/images/markdown/Analysis_spy_etf_adjusted_closing_prices.png)
 ![FNGU](./Resources/images/markdown/Analysis_fngu_etf_adjusted_closing_prices.png)
 
-### Metrics Results
-Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
-:-------------------------:|:-------------------------:
-**ARKK** - *Mean Absolute Error:* 9.43 | **ARKK** - *Mean Absolute Error:* 69.90
-**SPY** - *Mean Absolute Error:* 34.92 | **SPY** - *Mean Absolute Error:* 436.71
-**FNGU** - *Mean Absolute Error:* 49.36 | **FNGU** - *Mean Absolute Error:* 246.19
-![Prophet - Mean Absolute Error](./Resources/images/markdown/Prophet/metrics/Prophet_mean_absolute_error.png)  |  ![LSTM - Mean Absolute Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_mean_absolute_error.png)
-**ARKK** - *Mean Squared Error:* 192.27 | **ARKK** - *Mean Squared Error:* 4956.81
-**SPY** - *Mean Squared Error:* 1522.05 | **SPY** - *Mean Squared Error:* 190925.27
-**FNGU** - *Mean Squared Error:* 3147.08 | **FNGU** - *Mean Squared Error:* 64040.12
-![Prophet - Mean Squared Error](./Resources/images/markdown/Prophet/metrics/Prophet_mean_squared_error.png)  |  ![LSTM - Mean Squared Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_mean_squared_error.png)
-**ARKK** - *Root Mean Squared Error:* 13.87 | **ARKK** - *Root Mean Squared Error:* 70.40
-**SPY** - *Root Mean Squared Error:* 39.01 | **SPY** - *Root Mean Squared Error:* 436.95
-**FNGU** - *Root Mean Squared Error:* 56.10 | **FNGU** - *Root Mean Squared Error:* 253.067
-![Prophet - Root Mean Squared Error](./Resources/images/markdown/Prophet/metrics/Prophet_root_mean_squared_error.png)  |  ![LSTM - Root Mean Squared Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_root_mean_squared_error.png)
-### Forecasting Results
 Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
 :-------------------------:|:-------------------------:
 **All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Training Data vs Actual vs Forecasted Adjusted Closing Price* | **All 3 ETFs** - *Tickers*: **ARKK**, **SPY**, **FNGU** - *Training Data vs Actual vs Forecasted Adjusted Closing Price*
@@ -54,6 +38,23 @@ Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
 ![Prophet - FNGU - Training Data vs Actual vs Forecasted Adjusted Closing Price](./Resources/images/markdown/Prophet/plots/Prophet_fngu_training_data_vs_actual_vs_forecasted_etf_adjusted_closing_prices.png)  |  ![LSTM - FNGU - Training Data vs Actual vs Forecasted Adjusted Closing Price](./Resources/images/markdown/LSTM_RNN/plots/LSTM_RNN_fngu_training_data_vs_actual_vs_forecasted_etf_adjusted_closing_prices.png)
 **Bank of Montreal MicroSectors FANG Index** - *Ticker:* **FNGU** - Actual vs Forecasted Adjusted Closing Price | **Bank of Montreal MicroSectors FANG Index** - *Ticker:* **FNGU** - *Actual vs Forecasted Adjusted Closing Price*
 ![Prophet - FNGU - Actual vs Forecasted Adjusted Closing Price](./Resources/images/markdown/Prophet/plots/Prophet_fngu_actual_vs_forecasted_etf_adjusted_closing_prices.png)  |  ![LSTM - FNGU - Actual vs Forecasted Adjusted Closing Price](./Resources/images/markdown/LSTM_RNN/plots/LSTM_RNN_fngu_actual_vs_forecasted_etf_adjusted_closing_prices.png)
+
+### Metrics
+Facebook/Meta Prophet Models | Google Tensorflow LSTM RNN Models
+:-------------------------:|:-------------------------:
+**ARKK** - *Mean Absolute Error:* 9.43 | **ARKK** - *Mean Absolute Error:* 69.90
+**SPY** - *Mean Absolute Error:* 34.92 | **SPY** - *Mean Absolute Error:* 436.71
+**FNGU** - *Mean Absolute Error:* 49.36 | **FNGU** - *Mean Absolute Error:* 246.19
+![Prophet - Mean Absolute Error](./Resources/images/markdown/Prophet/metrics/Prophet_mean_absolute_error.png)  |  ![LSTM - Mean Absolute Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_mean_absolute_error.png)
+**ARKK** - *Mean Squared Error:* 192.27 | **ARKK** - *Mean Squared Error:* 4956.81
+**SPY** - *Mean Squared Error:* 1522.05 | **SPY** - *Mean Squared Error:* 190925.27
+**FNGU** - *Mean Squared Error:* 3147.08 | **FNGU** - *Mean Squared Error:* 64040.12
+![Prophet - Mean Squared Error](./Resources/images/markdown/Prophet/metrics/Prophet_mean_squared_error.png)  |  ![LSTM - Mean Squared Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_mean_squared_error.png)
+**ARKK** - *Root Mean Squared Error:* 13.87 | **ARKK** - *Root Mean Squared Error:* 70.40
+**SPY** - *Root Mean Squared Error:* 39.01 | **SPY** - *Root Mean Squared Error:* 436.95
+**FNGU** - *Root Mean Squared Error:* 56.10 | **FNGU** - *Root Mean Squared Error:* 253.067
+![Prophet - Root Mean Squared Error](./Resources/images/markdown/Prophet/metrics/Prophet_root_mean_squared_error.png)  |  ![LSTM - Root Mean Squared Error](./Resources/images/markdown/LSTM_RNN/metrics/LSTM_RNN_root_mean_squared_error.png)
+### Forecasting Results
 
 ### Facebook/Meta Prophet Model vs Tensorflow LSTM RNN Model Findings
 Both models were train on the same data, as well as used the same data for forecasting.
